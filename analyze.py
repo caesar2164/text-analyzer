@@ -32,7 +32,7 @@ connection_name = 'connection_table'
 attribute_name = 'attribute_table'
 
 # Save Power Differential Table
-outputfile_path = power_diff_name + '_' + output_time + '.csv'
+outputfile_path = output_time + '_' + power_diff_name + '.csv'
 print('\nSaving Power Differential Table output to file: ' + outputfile_path + ' ... '),
 with open(outputfile_path, 'w') as csvfile:
     writer = csv.writer(csvfile)
@@ -41,7 +41,7 @@ with open(outputfile_path, 'w') as csvfile:
 print('DONE!')
 
 # Save Connection Table
-outputfile_path = connection_name + '_' + output_time + '.csv'
+outputfile_path = output_time + '_' + connection_name + '.csv'
 print('\nSaving Connection Table output to file: ' + outputfile_path + ' ... '),
 with open(outputfile_path, 'w') as csvfile:
     writer = csv.writer(csvfile)
@@ -50,7 +50,7 @@ with open(outputfile_path, 'w') as csvfile:
 print('DONE!')
 
 # Save Attribute Table
-outputfile_path = attribute_name + '_' + output_time + '.csv'
+outputfile_path = output_time + '_' + attribute_name + '.csv'
 print('\nSaving Attribute Table output to file: ' + outputfile_path + ' ... '),
 with open(outputfile_path, 'w') as csvfile:
     writer = csv.writer(csvfile)
