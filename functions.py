@@ -83,7 +83,10 @@ def generate_tables(definitions_file, text_lines_to_analyze):
                         if relationship_mention[0] == person_mention[0]:
                             num_connections += 1
 
-                connection_vector[index] = num_connections
+                if num_connections == 0:
+                    connection_vector[index] = 0
+                else:
+                    connection_vector[index] = 1
 
         attribute_vector.append(num_person_mentions)
         attribute_vector.append(num_weighted_mentions)
