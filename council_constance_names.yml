@@ -1,0 +1,239 @@
+'John Wyclif':
+  position: 'Dissident'
+  latin:
+    - nominative: 'Johannes Wicleff '
+    - genitive: 'Johannis Wicleff '
+    - dative: 'Johanni Wicleff '
+    - ablative: 'Johanne Wicleff '
+    - accusative: 'Johannem Wicleff '
+    - nominative: 'Johannes dicto Wicleff '
+    - genitive: 'Johannis dicto Wicleff '
+    - dative: 'Johanni dicto Wicleff '
+    - ablative: 'Johanne dicto Wicleff '
+    - accusative: 'Johannem dicto Wicleff '
+'John XXIII':
+  position: 'Pope'
+  latin:
+    - nominative: 'Johannes XXIII '
+    - genitive: 'Johannis XXIII '
+    - dative: 'Johanni XXIII '
+    - ablative: 'Johanne XXIII '
+    - accusative: 'Johannem XXIII '
+    - nominative: 'Johannes 23 '
+    - genitive: 'Johannis 23 '
+    - dative: 'Johanni 23 '
+    - ablative: 'Johanne 23 '
+    - accusative: 'Johannem 23 '
+    - nominative: 'Papa Johannes '
+    - genitive: 'Papae Johannis '
+    - dative: 'Papa Johanni '
+    - ablative: 'Papa Johanne '
+    - accusative: 'Papam Johannem '
+    - nominative: 'Johannes Papa '
+    - genitive: 'Johannis Papae '
+    - dative: 'Johanni Papa '
+    - ablative: 'Johanne Papa '
+    - accusative: 'Johannem Papam '
+    - nominative: 'Johannes Episcopus '
+    - genitive: 'Johannis Episcopi '
+    - dative: 'Johanni Episcopo '
+    - ablative: 'Johanne Episcopo '
+    - accusative: 'Johannem Episcopum '
+    - nominative: 'Balthasar de Cossa '
+    - genitive: 'Balthasaris de Cossa '
+    - dative: 'Balthasari de Cossa '
+    - ablative: 'Balthasare de Cossa '
+    - accusative: 'Balthasarem de Cossa '
+'Francesco Zabarella':
+  position: 'Cardinal'
+  latin:
+    - nominative: 'Franciscus Zabarella '
+    - genitive: 'Francisci Zabarellae '
+    - ablative: 'Francisco Zabarella '
+    - accusative: 'Franciscum Zabarellam '
+'Archbishop of Canterbury':
+  position: 'Archbishop'
+  latin:
+    - genitive: 'Cantuariensis '
+    - dative: 'Cantuariensi '
+    - ablative: 'Cantuariense '
+    - accusative: 'Cantuariensem '
+'Archbishop of York':
+  position: 'Archbishop'
+  latin:
+    - genitive: 'Eboracensis '
+    - dative: 'Eboracensi '
+    - ablative: 'Eboracensi '
+    - accusative: 'Eboracensem '
+'Archbishop of Prague':
+  position: 'Archbishop'
+  latin:
+    - genitive: 'Pragensis '
+    - dative: 'Pragensi '
+    - ablative: 'Pragensi '
+    - accusative: 'Pragensem '
+'Sigismund':
+  position: 'King of the Romans'
+  latin:
+    - nominative: 'Sigismundus '
+    - genitive: 'Sigismundi '
+    - ablative: 'Sigismundo '
+    - accusative: 'Sigismundum '
+    - nominative: 'Caesar '
+    - genitive: 'Caesaris '
+    - dative: 'Caesari '
+    - ablative: 'Caesare '
+    - accusative: 'Caesarem '
+'Pope Gregory XII':
+  position: 'Pope'
+  latin:
+    - nominative: 'Gregorius XII '
+    - genitive: 'Gregorii XII '
+    - ablative: 'Gregorio XII '
+    - accusative: 'Gregorium XII '
+    - nominative: 'Angelus de Corario '
+    - genitive: 'Angeli de Corario '
+    - ablative: 'Angelo de Corario '
+    - accusative: 'Angelum de Corario '
+'Pope Benedict XIII':
+  position: 'Pope'
+  latin:
+    - nominative: 'Benedictus XIII '
+    - genitive: 'Benedicti XIII '
+    - ablative: 'Benedicto XIII '
+    - accusative: 'Benedictum XIII '
+    - nominative: 'Petrus de Luna '
+    - genitive: 'Petri de Luna '
+    - ablative: 'Petro de Luna '
+    - accusative: 'Petrum de Luna '
+'Jakoubek of Stribro':
+  position: 'Dissident'
+  latin:
+    - nominative: 'Iacobus de Misa '
+    - genitive: 'Iacobi de Misa '
+    - ablative: 'Iacobo de Misa '
+    - accusative: 'Iacobum de Misa '
+'Charles Malatesta':
+  position: 'Proctor for Pope Gregory XII'
+  latin:
+    - nominative: 'Carolus de Malatestis '
+    - genitive: 'Caroli de Malatestis '
+    - ablative: 'Carolo de Malatestis '
+    - accusative: 'Carolum de Malatestis '
+'John Hus':
+  position: 'Dissident'
+  latin:
+    - nominative: 'Johannes Huss '
+    - genitive: 'Johannis Huss '
+    - dative: 'Johanni Huss '
+    - ablative: 'Johanne Huss '
+    - accusative: 'Johannem Huss '
+'Archbishop of Milan':
+  position: 'Archbishop'
+  latin:
+    - genitive: 'Mediolanensis '
+    - ablative: 'Mediolanensi '
+    - accusative: 'Mediolanensem '
+'Bishop of Feltre':
+  position: 'Bishop'
+  latin:
+    - genitive: 'Feltrensis '
+    - ablative: 'Feltrensi '
+    - accusative: 'Feltrensem '
+'Bishop of Asti':
+  position: 'Bishop'
+  latin:
+    - genitive: 'Astensis '
+    - ablative: 'Astensi '
+    - accusative: 'Astensem '
+'Bishop of Alessandria':
+  position: 'Bishop'
+  latin:
+    - nominative: 'Alexandrinus '
+    - genitive: 'Alexandrini '
+    - ablative: 'Alexandrino '
+    - accusative: 'Alexandrinum '
+'Bishop of Bangour':
+  position: 'Bishop'
+  latin:
+    - nominative: 'Bangorensis '
+    - genitive: 'Bangorensis '
+    - ablative: 'Bangorensi '
+    - accusative: 'Bangorensem '
+'Bishop of Lavour':
+  position: 'Bishop'
+  latin:
+    - nominative: 'Vaurensis '
+    - genitive: 'Vaurensis '
+    - ablative: 'Vaurensi '
+    - accusative: 'Vaurensem '
+'John Petit':
+  position: 'Dissident'
+  latin:
+    - nominative: 'Johannes Parvus '
+    - genitive: 'Johannis Parvi '
+    - dative: 'Johanni Parvo '
+    - ablative: 'Johanne Parvo '
+    - accusative: 'Johannem Parvum '
+'Bishop of Trent':
+  position: 'Bishop'
+  latin:
+    - nominative: 'Episcopus Tridentinus '
+    - genitive: 'Episcopi Tridentini '
+    - ablative: 'Episcopo Tridentino '
+    - accusative: 'Episcopum Tridentinum '
+'Frederick, Duke of Austria':
+  position: 'Duke'
+  latin:
+    - nominative: 'Fredericus Austriae '
+    - genitive: 'Frederici Austriae '
+    - ablative: 'Frederico Austriae '
+    - accusative: 'Fredericum Austriae '
+    - nominative: 'Dux Austriae '
+    - genitive: 'Ducis Austriae '
+    - dative: 'Duci Austriae '
+    - ablative: 'Duce Austriae '
+    - accusative: 'Ducem Austriae '
+'King of Aragon':
+  position: 'King'
+  latin:
+    - genitive: 'Aragonensis '
+    - genitive: 'Aragona '
+    - ablative: 'Aragonae '
+    - accusative: 'Aragonam '
+    - genitive: 'Arragona '
+    - ablative: 'Arragonae '
+    - accusative: 'Arragonam '
+'Spanish count of Foix':
+  position: 'Count'
+  latin:
+    - ablative: 'Fuxo '
+'King of Navarre':
+  position: 'King'
+  latin:
+    - genitive: 'Navarrae '
+    - ablative: 'Navarra '
+    - accusative: 'Navarram '
+'Philip, count of Vertus':
+  position: 'Count'
+  latin:
+    - nominative: 'Philippus '
+    - genitive: 'Philippi '
+    - ablative: 'Philippo '
+    - accusative: 'Philippum '
+'King of Castille':
+  position: 'King'
+  latin:
+    - genitive: 'Castellae '
+    - ablative: 'Castella '
+    - accusative: 'Castellam '
+'Pope Martin V':
+  position: 'Pope'
+  latin:
+    - nominative: 'Martinus V '
+    - genitive: 'Martini V '
+    - ablative: 'Martino V '
+    - accusative: 'Martinum V '
+    - genitive: 'Columnae '
+    - ablative: 'Columna '
+    - accusative: 'Columnam '
