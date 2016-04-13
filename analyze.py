@@ -23,12 +23,22 @@ with open(textfile_path, "r") as textfile:
 with open(deffile_path, 'r') as stream:
     definitions_file = yaml.load(stream)
 
-connection_table, attribute_table = generate_tables(definitions_file, text_lines_to_analyze)
+power_diff_table, connection_table, attribute_table = generate_tables(definitions_file, text_lines_to_analyze)
 
 output_time = str(time.time()).split('.')[0]
 
+power_diff_name = 'power_differential_table'
 connection_name = 'connection_table'
 attribute_name = 'attribute_table'
+
+# Save Power Differential Table
+outputfile_path = power_diff_name + '_' + output_time + '.csv'
+print('\nSaving Power Differential Table output to file: ' + outputfile_path + ' ... '),
+with open(outputfile_path, 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    [writer.writerow(r) for r in power_diff_table]
+
+print('DONE!')
 
 # Save Connection Table
 outputfile_path = connection_name + '_' + output_time + '.csv'
