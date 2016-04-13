@@ -67,7 +67,7 @@ def generate_tables(definitions_file, text_lines_to_analyze):
             relationship_mentions = relationship[1]
 
             if relationship_name == person_name:
-                connection_vector[index] = None
+                connection_vector[index] = 0
             else:
                 num_person_mentions = 0
                 num_weighted_mentions = 0
