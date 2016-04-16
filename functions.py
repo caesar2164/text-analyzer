@@ -1,7 +1,8 @@
 import sys
 
 def generate_tables(definitions_file, text_lines_to_analyze):
-    power_diff_table = []
+    normal_power_diff_table = []
+    weighted_power_diff_table = []
     binary_power_diff_table = []
     connection_table = []
     attribute_table = []
@@ -59,7 +60,8 @@ def generate_tables(definitions_file, text_lines_to_analyze):
         person_mentions = person[1]
         person_position = person[2]
 
-        power_vector = list(person_table)
+        normal_power_vector = list(person_table)
+        weighted_power_vector = list(person_table)
         binary_power_vector = list(person_table)
         relationship_vector = list(person_table)
         connection_vector = list(person_table)
@@ -75,7 +77,8 @@ def generate_tables(definitions_file, text_lines_to_analyze):
             num_connections = 0
 
             if relationship_name == person_name:
-                power_vector[index] = 0
+                normal_power_vector[index] = 0
+                weighted_power_vector[index] = 0
                 binary_power_vector[index] = 0
                 num_connections = 0
             else:
@@ -95,12 +98,15 @@ def generate_tables(definitions_file, text_lines_to_analyze):
                         if relationship_mention[0] == person_mention[0]:
                             num_connections = 1
 
-                power_differential = num_weighted_person_mentions - num_weighted_relationship_mentions
-                if power_differential > 0:
-                    power_vector[index] = 2 * power_differential
+                normal_power_differential = num_person_mentions - num_relationship_mentions
+                weighted_power_differential = num_weighted_person_mentions - num_weighted_relationship_mentions
+                if normal_power_differential > 0:
+                    normal_power_vector[index] = 2 * normal_power_differential
+                    weighted_power_vector[index] = 2 * weighted_power_differential
                     binary_power_vector[index] = 1
                 else:
-                    power_vector[index] = 0
+                    normal_power_vector[index] = 0
+                    weighted_power_vector[index] = 0
                     binary_power_vector[index] = 0
 
             connection_vector[index] = num_connections
@@ -108,20 +114,23 @@ def generate_tables(definitions_file, text_lines_to_analyze):
         attribute_vector.append(num_person_mentions)
         attribute_vector.append(num_weighted_person_mentions)
         attribute_vector.append(person_position)
-        power_vector.insert(0, person_name)
+        normal_power_vector.insert(0, person_name)
+        weighted_power_vector.insert(0, person_name)
         binary_power_vector.insert(0, person_name)
         connection_vector.insert(0, person_name)
 
         attribute_table.append(attribute_vector)
-        power_diff_table.append(power_vector)
+        normal_power_diff_table.append(normal_power_vector)
+        weighted_power_diff_table.append(weighted_power_vector)
         binary_power_diff_table.append(binary_power_vector)
         connection_table.append(connection_vector)
         
         print('.'),
 
-    power_diff_table.insert(0, title_vector)
+    normal_power_diff_table.insert(0, title_vector)
+    weighted_power_diff_table.insert(0, title_vector)
     binary_power_diff_table.insert(0, title_vector)
     connection_table.insert(0, title_vector)
     attribute_table.insert(0, ['Person Name', '# Mentions', '# Weighted Mentions', 'Position'])
 
-    return power_diff_table, binary_power_diff_table, connection_table, attribute_table
+    return normal_power_diff_table, weighted_power_diff_table, binary_power_diff_table, connection_table, attribute_table
