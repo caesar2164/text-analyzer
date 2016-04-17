@@ -100,12 +100,16 @@ def generate_tables(definitions_file, text_lines_to_analyze):
 
                 normal_power_differential = num_person_mentions - num_relationship_mentions
                 weighted_power_differential = num_weighted_person_mentions - num_weighted_relationship_mentions
+                
                 if normal_power_differential > 0:
                     normal_power_vector[index] = 2 * normal_power_differential
+                else:
+                    normal_power_vector[index] = 0
+
+                if weighted_power_differential > 0:
                     weighted_power_vector[index] = 2 * weighted_power_differential
                     binary_power_vector[index] = 1
                 else:
-                    normal_power_vector[index] = 0
                     weighted_power_vector[index] = 0
                     binary_power_vector[index] = 0
 
