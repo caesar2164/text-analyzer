@@ -23,13 +23,15 @@ with open(textfile_path, "r") as textfile:
 with open(deffile_path, 'r') as stream:
     definitions_file = yaml.load(stream)
 
-normal_power_diff_table, weighted_power_diff_table, binary_power_diff_table, connection_table, attribute_table = generate_tables(definitions_file, text_lines_to_analyze)
+normal_power_diff_table, weighted_power_diff_table, normal_edge_list_matrix, weighted_edge_list_matrix, binary_power_diff_table, connection_table, attribute_table = generate_tables(definitions_file, text_lines_to_analyze)
 
 output_time = str(time.time()).split('.')[0]
 
 normal_power_diff_name = 'normal_power_diff_table'
 weighted_power_diff_name = 'weighted_power_diff_table'
 binary_power_diff_name = 'binary_power_diff_table'
+normal_edge_list_name = 'normal_edge_list_matrix'
+weighted_edge_list_name = 'weighted_edge_list_matrix'
 connection_name = 'connection_table'
 attribute_name = 'attribute_table'
 
@@ -48,6 +50,24 @@ print('\nSaving Weighted Power Differential Table output to file: ' + outputfile
 with open(outputfile_path, 'w') as csvfile:
     writer = csv.writer(csvfile)
     [writer.writerow(r) for r in weighted_power_diff_table]
+
+print('DONE!')
+
+# Save Normal Edge List Matrix
+outputfile_path = output_time + '_' + normal_edge_list_name + '.csv'
+print('\nSaving Normal Edge List Matrix output to file: ' + outputfile_path + ' ... '),
+with open(outputfile_path, 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    [writer.writerow(r) for r in normal_edge_list_matrix]
+
+print('DONE!')
+
+# Save Weighted Edge List Matrix
+outputfile_path = output_time + '_' + weighted_edge_list_name + '.csv'
+print('\nSaving Weighted Edge List Matrix output to file: ' + outputfile_path + ' ... '),
+with open(outputfile_path, 'w') as csvfile:
+    writer = csv.writer(csvfile)
+    [writer.writerow(r) for r in weighted_edge_list_matrix]
 
 print('DONE!')
 

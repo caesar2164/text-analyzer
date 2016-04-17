@@ -3,6 +3,8 @@ import sys
 def generate_tables(definitions_file, text_lines_to_analyze):
     normal_power_diff_table = []
     weighted_power_diff_table = []
+    normal_edge_list_matrix = []
+    weighted_edge_list_matrix = []
     binary_power_diff_table = []
     connection_table = []
     attribute_table = []
@@ -69,6 +71,9 @@ def generate_tables(definitions_file, text_lines_to_analyze):
         title_vector.append(person_name)
 
         for index, relationship in enumerate(relationship_vector):
+            normal_edge_list_vector = [person_name]
+            weighted_edge_list_vector = [person_name]
+
             relationship_name = relationship[0]
             relationship_mentions = relationship[1]
 
@@ -98,20 +103,30 @@ def generate_tables(definitions_file, text_lines_to_analyze):
                         if relationship_mention[0] == person_mention[0]:
                             num_connections = 1
 
+                normal_edge_list_vector.append(relationship_name)
+                weighted_edge_list_vector.append(relationship_name)
+
                 normal_power_differential = num_person_mentions - num_relationship_mentions
                 weighted_power_differential = num_weighted_person_mentions - num_weighted_relationship_mentions
-                
+
                 if normal_power_differential > 0:
                     normal_power_vector[index] = 2 * normal_power_differential
+                    normal_edge_list_vector.append(2 * normal_power_differential)
                 else:
                     normal_power_vector[index] = 0
+                    normal_edge_list_vector.append(0)
 
                 if weighted_power_differential > 0:
                     weighted_power_vector[index] = 2 * weighted_power_differential
+                    weighted_edge_list_vector.append(2 * weighted_power_differential)
                     binary_power_vector[index] = 1
                 else:
                     weighted_power_vector[index] = 0
+                    weighted_edge_list_vector.append(0)
                     binary_power_vector[index] = 0
+
+                normal_edge_list_matrix.append(normal_edge_list_vector)
+                weighted_edge_list_matrix.append(weighted_edge_list_vector)
 
             connection_vector[index] = num_connections
 
@@ -135,6 +150,8 @@ def generate_tables(definitions_file, text_lines_to_analyze):
     weighted_power_diff_table.insert(0, title_vector)
     binary_power_diff_table.insert(0, title_vector)
     connection_table.insert(0, title_vector)
+    normal_edge_list_matrix.insert(0, ['Sender', 'Receiver', 'Weight'])
+    weighted_edge_list_matrix.insert(0, ['Sender', 'Receiver', 'Weight'])
     attribute_table.insert(0, ['Person Name', '# Mentions', '# Weighted Mentions', 'Position'])
 
-    return normal_power_diff_table, weighted_power_diff_table, binary_power_diff_table, connection_table, attribute_table
+    return normal_power_diff_table, weighted_power_diff_table, normal_edge_list_matrix, weighted_edge_list_matrix, binary_power_diff_table, connection_table, attribute_table
