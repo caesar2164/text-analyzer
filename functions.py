@@ -101,7 +101,7 @@ def generate_tables(definitions_file, text_lines_to_analyze):
                         num_weighted_relationship_mentions += relationship_mention_weight
 
                         if relationship_mention[0] == person_mention[0]:
-                            num_connections = 1
+                            num_connections = 1 # this is meant to be binary
 
                 normal_edge_list_vector.append(relationship_name)
                 weighted_edge_list_vector.append(relationship_name)
