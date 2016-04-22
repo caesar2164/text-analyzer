@@ -106,8 +106,8 @@ def generate_tables(definitions_file, text_lines_to_analyze):
                 normal_edge_list_vector.append(relationship_name)
                 weighted_edge_list_vector.append(relationship_name)
 
-                normal_power_differential = num_person_mentions - num_relationship_mentions
-                weighted_power_differential = num_weighted_person_mentions - num_weighted_relationship_mentions
+                normal_power_differential = num_relationship_mentions - num_person_mentions
+                weighted_power_differential = num_weighted_relationship_mentions - num_weighted_person_mentions
 
                 if normal_power_differential > 0:
                     normal_power_vector[index] = normal_power_differential
